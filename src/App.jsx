@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import injectContext, { Context } from './store/AppContext'
+import Home from './views/Home'
+import AddContact from './views/AddContact'
+import EditContact from './views/EditContact';
 
 const App = () => {
+
+    
+
     return (
-        <h1>REACT APP</h1>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/addContact' element={<AddContact />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/editcontact/:id' element={<EditContact />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 
-export default App;
+export default injectContext(App)
