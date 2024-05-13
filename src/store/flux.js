@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         actions: {
             getContacts: () => {
-                fetch('https://playground.4geeks.com/apis/fake/contact/agenda/CarlosEduardo')
+                fetch('https://playground.4geeks.com/apis/fake/contact/agenda/CarlosGuzman')
                     .then(response => response.json())
                     .then(datos => setStore({ contacts: datos }))
             },

@@ -10,7 +10,7 @@ const AddContact = () => {
     const [contacto, setContacto] = useState({
         full_name: '',
         email: '',
-        agenda_slug: 'CarlosEduardo',
+        agenda_slug: 'CarlosGuzman',
         address: '',
         phone: ''
     })
